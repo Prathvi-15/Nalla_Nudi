@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8F0"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← "
+            android:textSize="22sp"
+            android:textColor="#4A148C"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🃏 Flashcards"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"/>
+
+        <TextView
+            android:id="@+id/tvStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#FF6F00"/>
+
+        <Button
+            android:id="@+id/btnShuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="🔀"
+            android:textSize="16sp"
+            android:backgroundTint="#EDE7F6"
+            android:textColor="#4A148C"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Progress -->
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 / 200"
+        android:textSize="13sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <!-- Subject Tag -->
+    <TextView
+        android:id="@+id/tvCardSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Science"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+        android:background="#7B1FA2"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- FRONT of Card (English) -->
+    <FrameLayout
+        android:id="@+id/cardFront"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#4A148C"
+                android:padding="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English Word"
+                    android:textSize="12sp"
+                    android:textColor="#CE93D8"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvCardFront"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Photosynthesis"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <!-- BACK of Card (Kannada) -->
+    <FrameLayout
+        android:id="@+id/cardBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:padding="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ಕನ್ನಡ ಅರ್ಥ"
+                    android:textSize="12sp"
+                    android:textColor="#9C27B0"
+                    android:paddingBottom="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvCardBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ದ್ಯುತಿಸಂಶ್ಲೇಷಣೆ"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#311B92"
+                    android:gravity="center"
+                    android:lineSpacingExtra="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <!-- Flip Button -->
+    <Button
+        android:id="@+id/btnFlip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="👆 Tap to see Kannada meaning"
+        android:backgroundTint="#EDE7F6"
+        android:textColor="#4A148C"
+        android:textSize="13sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Know / Don't Know Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDontKnow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="52dp"
+            android:text="❌ Don't Know"
+            android:backgroundTint="#C62828"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnKnow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="52dp"
+            android:text="✅ I Know It!"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

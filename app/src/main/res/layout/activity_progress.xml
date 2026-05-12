@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← "
+                android:textSize="22sp"
+                android:textColor="#4A148C"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 My Progress"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#4A148C"/>
+        </LinearLayout>
+
+        <!-- Motivation -->
+        <TextView
+            android:id="@+id/tvMotivation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keep learning!"
+            android:textSize="15sp"
+            android:textColor="#7B1FA2"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Stats Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Total Words -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#4A148C"
+                android:layout_marginEnd="6dp">
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="11sp"
+                    android:textColor="#CE93D8"/>
+            </LinearLayout>
+
+            <!-- Learned -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#388E3C"
+                android:layout_marginEnd="6dp">
+                <TextView
+                    android:id="@+id/tvLearned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Learned"
+                    android:textSize="11sp"
+                    android:textColor="#C8E6C9"/>
+            </LinearLayout>
+
+            <!-- Saved -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#F57F17">
+                <TextView
+                    android:id="@+id/tvSaved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saved"
+                    android:textSize="11sp"
+                    android:textColor="#FFF9C4"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Overall Progress -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overall Progress"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:paddingBottom="6dp"/>
+
+        <ProgressBar
+            android:id="@+id/pbOverall"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progressTint="#4A148C"
+            android:max="100"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Subject Progress -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress by Subject"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:paddingBottom="12dp"/>
+
+        <!-- Science -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="🔬 Science"
+                android:textSize="12sp"
+                android:textColor="#555"/>
+            <ProgressBar
+                android:id="@+id/pbScience"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="10dp"
+                android:progressTint="#7B1FA2"
+                android:max="100"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:id="@+id/tvSciPct"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="0/50"
+                android:textSize="11sp"
+                android:textColor="#4A148C"/>
+        </LinearLayout>
+
+        <!-- Math -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="📐 Math"
+                android:textSize="12sp"
+                android:textColor="#555"/>
+            <ProgressBar
+                android:id="@+id/pbMath"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="10dp"
+                android:progressTint="#1565C0"
+                android:max="100"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:id="@+id/tvMathPct"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="0/50"
+                android:textSize="11sp"
+                android:textColor="#4A148C"/>
+        </LinearLayout>
+
+        <!-- Commerce -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="💼 Commerce"
+                android:textSize="12sp"
+                android:textColor="#555"/>
+            <ProgressBar
+                android:id="@+id/pbCommerce"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="10dp"
+                android:progressTint="#E65100"
+                android:max="100"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+            <TextView
+                android:id="@+id/tvComPct"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="0/50"
+                android:textSize="11sp"
+                android:textColor="#4A148C"/>
+        </LinearLayout>
+
+        <!-- Quiz Stats -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz Statistics"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:paddingBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#EDE7F6"
+                android:layout_marginEnd="8dp">
+                <TextView
+                    android:id="@+id/tvBest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/10"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A148C"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Best Score"
+                    android:textSize="11sp"
+                    android:textColor="#7B1FA2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#EDE7F6">
+                <TextView
+                    android:id="@+id/tvQuizzes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#4A148C"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quizzes Taken"
+                    android:textSize="11sp"
+                    android:textColor="#7B1FA2"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

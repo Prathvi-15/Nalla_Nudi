@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8F0"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="32dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;- "
+            android:textSize="22sp"
+            android:textColor="#4A148C"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quiz Mode"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"/>
+
+        <TextView
+            android:id="@+id/tvStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#FF6F00"/>
+    </LinearLayout>
+
+    <!-- Progress Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Question 1 of 10"
+            android:textSize="12sp"
+            android:textColor="#888888"/>
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:progressTint="#4A148C"
+        android:max="100"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Question Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="#EDE7F6">
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What is the Kannada meaning?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#311B92"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 4 Answer Buttons -->
+    <Button
+        android:id="@+id/btnOpt1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7B1FA2"
+        android:layout_marginBottom="6dp"
+        android:text="Option 1"/>
+
+    <Button
+        android:id="@+id/btnOpt2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7B1FA2"
+        android:layout_marginBottom="6dp"
+        android:text="Option 2"/>
+
+    <Button
+        android:id="@+id/btnOpt3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7B1FA2"
+        android:layout_marginBottom="6dp"
+        android:text="Option 3"/>
+
+    <Button
+        android:id="@+id/btnOpt4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7B1FA2"
+        android:text="Option 4"/>
+
+</LinearLayout>

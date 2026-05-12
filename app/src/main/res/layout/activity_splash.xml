@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#4A148C">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ನಲ್ಲ ನುಡಿ"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nalla Nudi"
+        android:textSize="28sp"
+        android:textColor="#E1BEE7"
+        android:gravity="center"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bridge Dictionary for Students"
+        android:textSize="14sp"
+        android:textColor="#CE93D8"
+        android:gravity="center"
+        android:paddingTop="8dp"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#FFFFFF"
+        android:layout_marginTop="60dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading dictionary..."
+        android:textSize="12sp"
+        android:textColor="#CE93D8"
+        android:paddingTop="12dp"/>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8F0"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← "
+            android:textSize="22sp"
+            android:textColor="#4A148C"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Dictionary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"/>
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/etSearchPage"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Type English or ಕನ್ನಡ word..."
+        android:background="@drawable/search_bg"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="15sp"
+        android:inputType="text"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Recent Searches Label -->
+    <LinearLayout
+        android:id="@+id/layoutRecentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🕐 Recent Searches"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#6A1B9A"/>
+
+        <TextView
+            android:id="@+id/btnClearRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear All"
+            android:textSize="12sp"
+            android:textColor="#9C27B0"/>
+    </LinearLayout>
+
+    <!-- Recent Searches Chips Row -->
+    <HorizontalScrollView
+        android:id="@+id/scrollRecent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:id="@+id/layoutRecentChips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+    </HorizontalScrollView>
+
+    <!-- Results Count -->
+    <TextView
+        android:id="@+id/tvResultCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200 words available"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Results List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/tvNoResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No results found.\nTry a different word."
+        android:textSize="15sp"
+        android:textColor="#AAAAAA"
+        android:gravity="center"
+        android:paddingTop="60dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
