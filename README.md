@@ -53,7 +53,7 @@ Nalla-Nudi solves this problem by providing an interactive bilingual learning pl
 
 ## Clone Repository
 ```bash
-git clone https://github.com/your-username/nalla-nudi-app.git
+git clone https://github.com/your-username/Nalla_Nudi.git
 ```
 
 ## Open Project
@@ -121,22 +121,6 @@ app/
 ## Progress Tracking
 <img width="449" height="828" alt="image" src="https://github.com/user-attachments/assets/74e77ee7-fbf4-4bfb-a05c-2272238886ad" />
 
-
-Example:
-
-```md
-![Home Screen](screenshots/home.png)
-```
-
----
-
-# Demo Video
-
-Add demo video link here:
-
-```text
-https://your-demo-link.com
-```
 
 ---
 
